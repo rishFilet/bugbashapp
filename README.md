@@ -1,7 +1,7 @@
 # bugbashapp
 A web app for running the different bug bashes remotely and independently
 
-##FIRST TIME SETUP FOR DEVELOPMENT:
+## FIRST TIME SETUP FOR DEVELOPMENT:
 - Clone the repo
 - Navigate to the repo and activate the environment (you will need to have virtual env installed before doing this step)
 
