@@ -1,0 +1,15 @@
+.nav-item .nav-link{
+    color: #fff
+}
+
+.nav-item .nav-link.active{
+    color: #00FF00 !important
+}
+
+.nav-item .nav-link.disabled{
+    color: #A9A9A9 !important
+}
+
+.nav-item a:hover{
+    color: #000 !important
+}
