@@ -3,7 +3,11 @@ A web app for running the different bug bashes remotely and independently
 
 ## FIRST TIME SETUP FOR DEVELOPMENT:
 - Clone the repo
-- Navigate to the repo and activate the environment (you will need to have virtual env installed before doing this step)
+- If you don't have virtual env install it with:
+  `pip3 install virtualenv`
+- Create the virutal env folder inside the repo directory: 
+  `virtualenv venv`
+- Activate the environment (you will need to have virtual env installed before doing this step)
 
 `source venv/bin/activate`
 
@@ -23,4 +27,4 @@ A web app for running the different bug bashes remotely and independently
     - Name the configuration 'Migrate'
     - Under script path, point to where `manage.py` is hosted on your git repo
     - Under parameters, enter `migrate`
-- Now hit play for `runserver` and then open the browser with the address `127.0.0.1:8888`
+- Now hit play for `runserver` and then open the browser with the address `127.0.0.1:8000`
