@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='buglogstructure',
             name='feature',
-            field=models.CharField(choices=[('Camera', 'Theia/Camera'), ('Tstat Reg', 'Tstat Registration')], default=('Camera', 'Theia/Camera'), max_length=2),
+            field=models.CharField(choices=[('Camera', 'Theia/Camera'), ('Tstat Reg', 'Tstat Registration')], default=('Camera', 'Theia/Camera'), max_length=300),
         ),
         migrations.AddField(
             model_name='buglogstructure',
@@ -47,6 +47,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='buglogstructure',
             name='device',
-            field=models.CharField(choices=[('6s', 'Iphone 6s 20140928'), ('Mini', 'Ipad Mini 20142706')], default=('6s', 'Iphone 6s 20140928'), max_length=2),
+            field=models.CharField(choices=[('6s', 'Iphone 6s 20140928'), ('Mini', 'Ipad Mini 20142706')], default=('6s', 'Iphone 6s 20140928'), max_length=300),
         ),
     ]

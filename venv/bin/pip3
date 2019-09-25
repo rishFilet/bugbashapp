@@ -1,4 +1,4 @@
-#!/Users/rishi.k/rishi_code/bugbashapp/venv/bin/python3.7
+#!/Users/donald.s/workspace/bugbashapp/venv/bin/python3.6
 # -*- coding: utf-8 -*-
 import re
 import sys
