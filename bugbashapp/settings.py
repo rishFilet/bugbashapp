@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'bugbashapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bugbash',
+        'NAME': 'bugbashdb',
 		'USER': 'ecobee',
 		'PASSWORD': 'passwordQA1',
 		'HOST': 'localhost',
