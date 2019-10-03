@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from bugbashapp.firebase import FirebaseDB
 from django.contrib import auth
+from . import models
 
 
 # Create your views here.
@@ -9,7 +10,7 @@ def signIn(request):
     return render(request, "signIn.html")
 
 def postSignIn(request):
-    email = request.POST.get('pass')
+    email = request.POST.get('username')
     passw = request.POST.get('pass')
     try:
         user = FirebaseDB.authe.sign_in_with_email_and_password(email, passw)
@@ -28,7 +29,7 @@ def logout(request):
 
 
 def signUp(request):
-    return render(request, "signup.html")
+    return render(request, "postSignup.html")
 
 
 def postsignup(request):
@@ -39,7 +40,7 @@ def postsignup(request):
         user = FirebaseDB.authe.create_user_with_email_and_password(email, passw)
     except:
         message = "Unable to create account try again"
-        return render(request, "signup.html", {"messg": message})
+        return render(request, "postSignup.html", {"messg": message})
         uid = user['localId']
     data = {"name": name, "status": "1"}
     database.child("users").child(uid).child("details").set(data)
