@@ -1,7 +1,6 @@
 import pyrebase
 
-class FirebaseDB:
-    config = {
+config = {
         'apiKey': "AIzaSyBprp7rJwq64GaMhbX-5ST2wb7PS43IVZw",
         'authDomain': "bugbash-b4d18.firebaseapp.com",
         'databaseURL': "https://bugbash-b4d18.firebaseio.com",
@@ -12,7 +11,9 @@ class FirebaseDB:
         'measurementId': "G-FQR855D0DY"
     }
 
-    def __init__(self):
-        self.firebase = pyrebase.initialize_app(self.config)
-        self.authe = self.firebase.auth()
-        self.database=self.firebase.database()
+firebase = pyrebase.initialize_app(config)
+authe = firebase.auth()
+database= firebase.database()
+
+user = authe.create_user_with_email_and_password("random@gmail.com", "crazy_password")
+print(user)

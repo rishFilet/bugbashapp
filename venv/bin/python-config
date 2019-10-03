@@ -1,4 +1,4 @@
-#!/Users/donald.s/workspace/bugbashapp/venv/bin/python
+#!/Users/rishi.k/rishi_code/bugbashapp/venv/bin/python
 
 import sys
 import getopt

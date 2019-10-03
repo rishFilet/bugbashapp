@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from bugbashapp.firebase import FirebaseDB
 from django.contrib import auth
 from . import models
 
@@ -7,7 +6,7 @@ from . import models
 # Create your views here.
 
 def signIn(request):
-    return render(request, "signIn.html")
+    return render(request, "login.html")
 
 def postSignIn(request):
     email = request.POST.get('username')
@@ -16,7 +15,7 @@ def postSignIn(request):
         user = FirebaseDB.authe.sign_in_with_email_and_password(email, passw)
     except:
         message = "invalid credentials"
-        return render(request, "signIn.html", {"messg": message})
+        return render(request, "login.html", {"messg": message})
     print(user['idToken'])
     session_id = user['idToken']
     request.session['uid'] = str(session_id)
@@ -25,7 +24,7 @@ def postSignIn(request):
 
 def logout(request):
     auth.logout(request)
-    return render(request, 'signIn.html')
+    return render(request, 'login.html')
 
 
 def signUp(request):
@@ -44,4 +43,4 @@ def postsignup(request):
         uid = user['localId']
     data = {"name": name, "status": "1"}
     database.child("users").child(uid).child("details").set(data)
-    return render(request, "signIn.html")
+    return render(request, "login.html")

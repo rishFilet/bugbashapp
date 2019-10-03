@@ -20,7 +20,7 @@ from users import views as Users
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup/', Users.signUp, name= "signup"),
-    path('postsignup/', Users.postSignup, name = "postsignup"),
-    path('signin/', loginV.signIn, name="signin")
+    path('signup/', Users.signup, name= "signup"),
+    path('postsignup/', Users.postsignup, name= "postsignup"),
+    path('login/', loginV.signIn, name="login")
 ]
