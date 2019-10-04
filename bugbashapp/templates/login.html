@@ -2,23 +2,39 @@
 
 {% block content %}
 
-{% if msg %}
-<script>
-    alert('{{msg}}')
+{% for message in messages %}
+{% if "Success:" in message|stringformat:"s" %}
+<div class="alert alert-success">
+    <a class="close" href="#" data-dismiss="alert">×</a>
 
-</script>
+    {{ message }}
+</div>
+
+{% else %}
+<div class="alert alert-danger">
+    <a class="close" href="#" data-dismiss="alert">×</a>
+
+    {{ message }}
+</div>
 {% endif %}
+{% endfor %}
+
 <div class="container full-height">
     <div class="row align-items-center">
         <div class="login-container">
-            <form action="/postsign/" method="post">
-                {% csrf_token %}
-                Email :
-                <input type="email" name="email">
-                Password:
-                <input type="password" name="pass">
-                <input type="submit" value="SignIn">
-            </form>
+             <form id="user_login" method="post" action="/home/"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <!-- Display each form. The as_p method wraps each element in a paragraph
+                 (<p>) element. This ensures each element appears on a new line,
+                 making everything look neater. -->
+            {{ user_login.as_p }}
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" name="submit" value="Log In" />
+        </form>
         </div>
 
     </div>
