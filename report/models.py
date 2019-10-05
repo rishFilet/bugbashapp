@@ -1,6 +1,5 @@
 from django.db import models
 from django.forms import ModelForm
-from enum import Enum
 
 
 # Create your models here.

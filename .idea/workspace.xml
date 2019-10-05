@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e155d3a7-b6aa-46a2-bdb9-be8f9cc8e1f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/static/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/css/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.gitignore" beforeDir="false" />
@@ -64,10 +66,23 @@
       <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qmock.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qunit/qunit-1.15.0.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qunit/qunit-1.15.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/tempFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/testPyre.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bugbashapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/firebase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
