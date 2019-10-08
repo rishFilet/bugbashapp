@@ -113,7 +113,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -234,11 +234,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.makemigrations" />
       <item itemvalue="Python.Run Server" />
+      <item itemvalue="Python.makemigrations" />
       <item itemvalue="Python.migrate" />
-      <item itemvalue="Python.testPyre" />
       <item itemvalue="Python.tempFile" />
+      <item itemvalue="Python.testPyre" />
     </list>
     <recent_temporary>
       <list>
