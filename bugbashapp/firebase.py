@@ -1,18 +1,14 @@
 import pyrebase
 
 class FirebaseDB:
+    # Firebase databse information and setup
     config = {
-        'apiKey': "AIzaSyBprp7rJwq64GaMhbX-5ST2wb7PS43IVZw",
-        'authDomain': "bugbash-b4d18.firebaseapp.com",
-        'databaseURL': "https://bugbash-b4d18.firebaseio.com",
-        'projectId': "bugbash-b4d18",
-        'storageBucket': "",
-        'messagingSenderId': "356090318351",
-        'appId': "1:356090318351:web:e865ba40d674301fe59d7a",
-        'measurementId': "G-FQR855D0DY"
+        "apiKey": "AIzaSyBprp7rJwq64GaMhbX-5ST2wb7PS43IVZw",
+        "authDomain": "bugbash-b4d18.firebaseapp.com",
+        "databaseURL": "https://bugbash-b4d18.firebaseio.com/",
+        "storageBucket": "bugbash-b4d18.appspot.com",
     }
 
-    def __init__(self):
-        self.firebase = pyrebase.initialize_app(self.config)
-        self.authe = self.firebase.auth()
-        self.database=self.firebase.database()
+    firebase = pyrebase.initialize_app(config)
+    authe = firebase.auth()
+    database = firebase.database()

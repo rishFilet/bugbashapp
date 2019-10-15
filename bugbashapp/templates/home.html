@@ -1,10 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% for message in messages %}
+{% if "WELCOME" in message|stringformat:"s" %}
+<div class="alert alert-success">
+    <a class="close" href="#" data-dismiss="alert">×</a>
 
-<h1>IOS Bug Bash</h1>
+    {{ message }}
+</div>
 
-{% if submitted %}
+{% else %}
+<div class="alert alert-danger">
+    <a class="close" href="#" data-dismiss="alert">×</a>
+
+    {{ message }}
+</div>
+{% endif %}
+{% endfor %}
+
+<div class="screen-container">
+    {% if submitted %}
 <p class="success">
     Your message was submitted successfully. Thank you.
 </p>
@@ -21,4 +36,6 @@
     {% csrf_token %}
 </form>
 {% endif %}
+</div>
+
 {% endblock content %}
