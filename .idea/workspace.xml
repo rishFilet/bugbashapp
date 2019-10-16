@@ -3,86 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e155d3a7-b6aa-46a2-bdb9-be8f9cc8e1f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/INSTALL.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/README.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/fixtures/initial_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/css/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/css/jquery.autocomplete.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/comments.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/doc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/img02.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/img05.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/img06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/spacer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/autocomplete-init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/jquery-1.3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/jquery.autocomplete.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/jquery.formset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/empty-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/form-template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-admin-widget.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-multiple-formsets.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-stacked.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/inline-formset-autocomplete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/inline-formset-django-ajax-select.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/inline-formset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/max-forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/min-forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/posted-data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/docs/usage.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/src/jquery.formset.js" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/jquery.formset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/basic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/jquery-1.11.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qmock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qunit/qunit-1.15.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qunit/qunit-1.15.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/tempFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/testPyre.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/firebase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/report/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,11 +20,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>database</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -177,7 +94,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -247,6 +164,16 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -260,15 +187,6 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -281,5 +199,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/report/views.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

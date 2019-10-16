@@ -18,12 +18,14 @@ def create_report(request):
 		if form.is_valid():
 
 			try:
-
+				print("im in try block")
 				message = "Bug Log Form"
 				tz = pytz.timezone('US/Eastern')
 				current_time = datetime.now(timezone.utc).astimezone(tz)
 				millis = int(time.mktime(current_time.timetuple()))
 				idToken = request.session['uid']
+				print(idToken)
+				print(message)
 				localId = fdb.authe.get_account_info(idToken)
 
 				# ['users']['localId']
