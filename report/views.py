@@ -19,7 +19,7 @@ def create_report(request):
 
 			try:
 
-				message = "Bug Log Form"
+				message = "SUCCESS: Bug Report Submitted"
 				tz = pytz.timezone('US/Eastern')
 				current_time = datetime.now(timezone.utc).astimezone(tz)
 				millis = int(time.mktime(current_time.timetuple()))
@@ -42,7 +42,7 @@ def create_report(request):
 				fdb.database.child("users").child(localId).child("reports").child(millis).set(data)
 				return HttpResponseRedirect('/home/', messages.error(request, message))
 			except:
-				message = "Something Error message"
+				message = "ERROR: Could not log bug successfully"
 				return redirect('/home/', messages.error(request, message))
 
 			cd = form.cleaned_data
