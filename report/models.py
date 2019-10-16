@@ -27,9 +27,9 @@ class Features(models.Model):
     ]
 
 class BugLogStructure(models.Model):
-    device = models.CharField(max_length = len(Devices.DEVICE_LIST), choices =
-    Devices.DEVICE_LIST, default=Devices.DEVICE_LIST[0])
-    feature = models.CharField(max_length = len(Features.FEATURE_LIST), choices =
+    device = models.CharField(max_length = 50, choices =Devices.DEVICE_LIST,
+                              default=Devices.DEVICE_LIST[0])
+    feature = models.CharField(max_length = 50, choices =
     Features.FEATURE_LIST, default = Features.FEATURE_LIST[0])
     summary = models.CharField(max_length = 100)
     steps = models.CharField(max_length = 100)
