@@ -26,7 +26,7 @@ def create_report(request):
 				idToken = request.session['uid']
 				print(idToken)
 				print(message)
-				localId = fdb.authe.get_account_info(idToken)
+				user_info = fdb.authe.get_account_info(idToken)
 
 				# ['users']['localId']
 
@@ -41,7 +41,7 @@ def create_report(request):
 				form.save()
 				print(data)
 				# Add dictionary data to the database
-				print("localid: " + localId)
+				print("localid: " + user_info['users']['localId'])
 				fdb.database.child("users").child(idToken).child("reports").child(millis).set(data)
 				return HttpResponseRedirect('/home/', messages.error(request, message))
 			except:

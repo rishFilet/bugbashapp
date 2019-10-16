@@ -16,6 +16,9 @@ def login(request):
 			user = fdb.authe.sign_in_with_email_and_password(email, password)
 			message = "WELCOME TO THE BUG BASH {}".format(fdb.database.child("users").child(user[
 			'localId']).child("details").child("First").get().val().capitalize())
+			session_id = user['idToken']
+			print(session_id)
+			request.session['uid'] = str(session_id)
 			# user_login.save()
 
 		except Exception as e:
@@ -29,8 +32,7 @@ def login(request):
 				message = "Email address not registered. Please register."
 				return redirect('/register/', messages.error(request, message))
 		return HttpResponseRedirect('/home/', messages.error(request, message))
-		session_id = user['idToken']
-		request.session['uid'] = str(session_id)
+
 	else:
 		return render(request, 'login.html', {'user_login': user_login})
 
