@@ -19,12 +19,12 @@ def create_report(request):
 
 			try:
 
-				message = "Bug Log Form"
+				message = "SUCCESS: Bug Report Submitted"
 				tz = pytz.timezone('US/Eastern')
 				current_time = datetime.now(timezone.utc).astimezone(tz)
 				millis = int(time.mktime(current_time.timetuple()))
 				idToken = request.session['uid']
-				localId = fdb.authe.get_account_info(idToken)
+				user_info = fdb.authe.get_account_info(idToken)
 
 				# ['users']['localId']
 
@@ -37,13 +37,12 @@ def create_report(request):
 					"Result": form.data.get("result")
 				}
 				form.save()
-				print(data)
 				# Add dictionary data to the database
-				print("localid: " + localId)
-				fdb.database.child("users").child(idToken).child("reports").child(millis).set(data)
+				localId = user_info['users'][0]['localId']
+				fdb.database.child("users").child(localId).child("reports").child(millis).set(data)
 				return HttpResponseRedirect('/home/', messages.error(request, message))
 			except:
-				message = "Something Error message"
+				message = "ERROR: Could not log bug successfully"
 				return redirect('/home/', messages.error(request, message))
 
 			cd = form.cleaned_data
