@@ -21,7 +21,7 @@ from report import views as Report
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', Users.register, name= "register"),
-    path('login/', Users.login, name="login"),
+    path('login/', Users.login_view, name="login_view"),
     path('home/', Report.create_report, name = "home")
 
 ]
