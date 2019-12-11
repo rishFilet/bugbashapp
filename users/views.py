@@ -1,13 +1,8 @@
-from django.contrib.auth.models import User
-from django.shortcuts import render, redirect, HttpResponseRedirect
-from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.shortcuts import render, HttpResponseRedirect
 
 from users.managers import CustomUserManager
 from .forms import UserForm, UserLogin
-from .models import models
-from bugbashapp.firebase import FirebaseDB as fdb
-import json
 
 
 def login_view(request):
