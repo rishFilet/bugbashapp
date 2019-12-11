@@ -1,13 +1,13 @@
-from django.contrib import messages
-from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-
-from report.models import fields
-from . import models
-from bugbashapp.firebase import FirebaseDB as fdb
 import time
 from datetime import datetime, timezone
+
 import pytz
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+
+from bugbashapp.firebase import FirebaseDB as fdb
+from . import models
 
 
 # Create your views here.
