@@ -1,4 +1,6 @@
 from django import forms
+from django.contrib.auth.base_user import BaseUserManager
+
 from .models import CustomUser
 
 
