@@ -2,72 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e155d3a7-b6aa-46a2-bdb9-be8f9cc8e1f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/bugbashapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bugbashapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/INSTALL.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/README.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/fixtures/initial_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/example/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/css/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/css/jquery.autocomplete.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/bg04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/comments.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/doc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/img02.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/img05.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/img06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/images/spacer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/autocomplete-init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/jquery-1.3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/jquery.autocomplete.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/static/js/jquery.formset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/empty-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/form-template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-admin-widget.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-multiple-formsets.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-stacked.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/formset-table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/inline-formset-autocomplete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/inline-formset-django-ajax-select.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/inline-formset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/max-forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/min-forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/example/posted-data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/demo/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/docs/usage.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/src/jquery.formset.js" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/jquery.formset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/basic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/jquery-1.11.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qmock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qunit/qunit-1.15.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bugbashapp/static/package_collections/django-dynamic-formset/tests/lib/qunit/qunit-1.15.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bugbashapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bugbashapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlite3.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_customuser_uid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,89 +23,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="296029440">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="23" />
-          <entry key="Python" value="65" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4320">
-              <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/report/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FavoritesManager">
+    <favorites_list name="bugbashapp" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -168,67 +34,14 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>database</find>
-      <find>idea</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/users/views.py" />
-        <option value="$PROJECT_DIR$/report/models.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="413" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
-  </component>
   <component name="ProjectId" id="1RkGI1qNRIZhIthhDKTdOsnyP1X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="bugbashapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bugbashapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bugbashapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bugbashapp" type="462c0819:PsiDirectoryNode" />
-              <item name="bugbashapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bugbashapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bugbashapp" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bugbashapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bugbashapp" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -365,6 +178,16 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -387,44 +210,12 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="DB Browser" order="3" weight="0.32967034" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2023939" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="ReST Console" order="3" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -432,54 +223,37 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4320">
-          <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/__init__.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/django/contrib/auth/__init__.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/users/views.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="get_response" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
