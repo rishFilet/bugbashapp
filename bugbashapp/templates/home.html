@@ -2,7 +2,7 @@
 
 {% block content %}
 {% for message in messages %}
-{% if "WELCOME" in message|stringformat:"s" or "SUCCESS" in message|stringformat:"s"%}
+{% if message.success or "WELCOME" in message|stringformat:"s" or "SUCCESS" in message|stringformat:"s"%}
 <div class="alert alert-success">
     <a class="close" href="#" data-dismiss="alert">×</a>
 

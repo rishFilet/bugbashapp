@@ -15,6 +15,7 @@ def create_report(request):
 	submitted = False
 	if request.method == 'POST':
 		form = models.BugLogForm(request.POST)
+
 		if form.is_valid():
 
 			try:
@@ -50,7 +51,5 @@ def create_report(request):
 			return HttpResponseRedirect('/home?submitted=True')
 	else:
 		form = models.BugLogForm()
-		if 'submitted' in request.GET:
-			submitted = True
 
 	return render(request, 'home.html', {'form': form, 'submitted': submitted})
