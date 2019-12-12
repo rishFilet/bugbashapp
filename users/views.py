@@ -45,7 +45,7 @@ def register(request):
 			user.save()
 			msgs.success(request, "Success: You are registered!")
 			registered = True
-			return redirect('login_view')
+			return redirect('home')
 
 		else:
 			try:
