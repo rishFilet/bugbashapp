@@ -2,7 +2,7 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
 
-from users.views import register
+from accounts.views import register
 
 
 class LoginTests(TestCase):

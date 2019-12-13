@@ -3,8 +3,8 @@
 from django.test import TestCase
 from django.urls import resolve
 
-from report.views import create_report
-from users.views import login_view, register
+from bugreport.views import create_report
+from accounts.views import login_view, register
 
 
 class ResolversTest(TestCase):

@@ -26,8 +26,6 @@ def create_report(request):
                 idToken = request.session['uid']
                 user_info = fdb.authe.get_account_info(idToken)
 
-                # ['users']['localId']
-
                 # Add data from BugLogForm to a dictionary
                 data = {
                     "Device": form.data.get("device"),
@@ -38,8 +36,8 @@ def create_report(request):
                 }
                 form.save()
                 # Add dictionary data to the database
-                localId = user_info['users'][0]['localId']
-                fdb.database.child("users").child(localId).child("reports").child(millis).set(data)
+                localId = user_info['accounts'][0]['localId']
+                fdb.database.child("accounts").child(localId).child("reports").child(millis).set(data)
                 return HttpResponseRedirect('/home/', messages.error(request, message))
             except:
                 message = "ERROR: Could not log bug successfully"
