@@ -6,7 +6,7 @@ from .forms import UserLogin, RegisterForm
 
 def login_view(request):
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('/bugreport/')
     else:
         user_login = UserLogin(data=request.POST)
         if request.method == 'POST':
@@ -18,7 +18,7 @@ def login_view(request):
             if user is not None:
                 auth_login(request, user)
                 msgs.success(request, 'Welcome {} to the Bug bash'.format(user.first_name))
-                return HttpResponseRedirect('/home/')
+                return HttpResponseRedirect('/bugreport/')
             else:
                 msgs.error(request, 'Error: Wrong username/password')
                 return render(request, 'login.html', {'user_login': user_login})
@@ -41,7 +41,7 @@ def register(request):
             user = register_form.save()
             auth_login(request, user)
             msgs.success(request, "Success: You are registered!")
-            return HttpResponseRedirect('/home/')
+            return HttpResponseRedirect('/bugreport/')
         else:
             try:
                 if 'This email address is already in use' in register_form.errors['email'][0]:
