@@ -1,26 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <!-- Favicon -->
 
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{% block title %}Bug Bash Board {% endblock title %}</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Bug Bash Board {% endblock title %}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}">
 
-        {% block stylesheet %}{% endblock stylesheet %}
-    </head>
-    <body>
-        {% block body %}
-            {% include 'navbar.html' %}
+    {% block stylesheet %}{% endblock stylesheet %}
+</head>
+<body>
+{% block body %}
+{% include 'navbar.html' %}
 
-            {% block content %}
-            {% endblock content %}
+{% block content %}
+{% endblock content %}
 
-    {% endblock body %}
-    </body>
+{% endblock body %}
+</body>
 </html>
