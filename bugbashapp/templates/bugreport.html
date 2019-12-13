@@ -2,7 +2,7 @@
 
 {% block content %}
 {% for message in messages %}
-{% if message.success or "WELCOME" in message|stringformat:"s" or "SUCCESS" in message|stringformat:"s"%}
+{% if "Welcome" in message|stringformat:"s" or "SUCCESS" in message|stringformat:"s"%}
 <div class="alert alert-success">
     <a class="close" href="#" data-dismiss="alert">×</a>
 
@@ -20,22 +20,22 @@
 
 <div class="screen-container">
     {% if submitted %}
-<p class="success">
-    Your message was submitted successfully. Thank you.
-</p>
+    <p class="success">
+        Your message was submitted successfully. Thank you.
+    </p>
 
-{% else %}
-<form action="" method="post" novalidate>
-    <table>
-        {{ form.as_table }}
-        <tr>
-            <td>&nbsp;</td>
-            <td><input type="submit" value="Submit"></td>
-        </tr>
-    </table>
-    {% csrf_token %}
-</form>
-{% endif %}
+    {% else %}
+    <form action="" method="post" novalidate>
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+        {% csrf_token %}
+    </form>
+    {% endif %}
 </div>
 
 {% endblock content %}

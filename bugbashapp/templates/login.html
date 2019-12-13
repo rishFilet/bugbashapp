@@ -3,7 +3,7 @@
 {% block content %}
 
 {% for message in messages %}
-{% if "Success:" in message|stringformat:"s" %}
+{% if "Success:" in message|stringformat:"s" or "successfully" in message|stringformat:"s" %}
 <div class="alert alert-success">
     <a class="close" href="#" data-dismiss="alert">×</a>
 
@@ -22,20 +22,20 @@
 <div class="container full-height">
     <div class="row align-items-center">
         <div class="screen-container">
-             <form id="user_login" method="post" action="/login/"
-                enctype="multipart/form-data">
+            <form id="user_login" method="post" action="/login/"
+                  enctype="multipart/form-data">
 
-            {% csrf_token %}
+                {% csrf_token %}
 
-             {% for field in user_login %}
-             <div class="form-group">
-                {{ field.label_tag }}
-                 {% render_field field class="form-control" %}
-             </div>
-            {% endfor %}
-            <!-- Provide a button to click to submit the form. -->
-            <input type="submit" name="submit" value="Log In" />
-        </form>
+                {% for field in user_login %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {% render_field field class="form-control" %}
+                </div>
+                {% endfor %}
+                <!-- Provide a button to click to submit the form. -->
+                <input type="submit" name="submit" value="Log In"/>
+            </form>
         </div>
 
     </div>
