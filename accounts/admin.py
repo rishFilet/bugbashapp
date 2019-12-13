@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .forms import UserForm
+from .forms import AccountForm
 from .models import CustomUser
 
 
 class CustomUserAdmin(UserAdmin):
-    add_form = UserForm
+    add_form = AccountForm
 
     model = CustomUser
     list_display = ('email', 'is_staff', 'is_active',)

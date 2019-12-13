@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
 
 
-class UserForm(forms.ModelForm):
+class AccountForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
@@ -14,7 +14,7 @@ class UserForm(forms.ModelForm):
         # Get the email
         email = self.cleaned_data.get('email')
 
-        # Check to see if any users already exist with this email as a username.
+        # Check to see if any account already exist with this email as a username.
         try:
             match = CustomUser.objects.get(email = email)
         except:
