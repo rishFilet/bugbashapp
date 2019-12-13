@@ -5,7 +5,7 @@
     <div class="row align-items-center">
         <div class="screen-container">
             <h2>Register</h2>
-            <form method="post" novalidate>
+            <form class="reg-login-form" method="post" novalidate>
                 {% csrf_token %}
                 {% include 'includes/form.html' %}
                 <button type="submit" class="btn btn-primary">Create an account</button>
