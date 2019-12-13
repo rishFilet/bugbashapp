@@ -17,13 +17,14 @@ from django.contrib import admin
 from django.urls import path
 
 from report import views as Report
-from users import views as Users
+from users import views as user_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', Users.register, name= "register"),
-    path('login/', Users.login_view, name="login_view"),
-    path('home/', Report.create_report, name = "home"),
-    path('logout/', Users.logout_view, name = "logout_view")
+    path('', user_view.login_view, name='landing'),
+    path('register/', user_view.register, name="register"),
+    path('login/', user_view.login_view, name="login_view"),
+    path('home/', Report.create_report, name="home"),
+    path('logout/', user_view.logout_view, name = "logout_view")
 
 ]
