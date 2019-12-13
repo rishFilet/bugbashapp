@@ -16,6 +16,18 @@ class LoginTests(TestCase):
 
 
 class RegisterTest(TestCase):
+    def setUp(self):
+        url = reverse('register')
+        data = {
+            'first_name': 'test',
+            'last_name': 'test',
+            'email': 'test@test.com',
+            'password1': 'Test3Test#',
+            'password2': 'Test3Test#'
+        }
+        self.response = self.client.post(url, data)
+        self.home_url = reverse('home')
+
     def test_signup_status_code(self):
         url = reverse('register')
         response = self.client.get(url)
@@ -24,3 +36,6 @@ class RegisterTest(TestCase):
     def test_signup_url_resolves_register_view(self):
         view = resolve('/register/')
         self.assertEquals(view.func, register)
+
+    def test_create_account_resolves_to_home_page(self):
+        self.assertRedirects(self.response, self.home_url)
