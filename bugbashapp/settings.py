@@ -137,3 +137,4 @@ STATICFILES_DIRS = [
 
 # URLS
 LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/bugreport/'

@@ -25,6 +25,7 @@ urlpatterns = [
     path('register/', user_view.register, name="register"),
     path('login/', user_view.login_view, name="login_view"),
     path('bugreport/', Report.create_report, name="bug_report"),
+    path('home/', Report.create_report, name="home"),  # todo: create home page
     path('logout/', user_view.logout_view, name="logout_view")
 
 ]
