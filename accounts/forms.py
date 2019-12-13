@@ -16,7 +16,7 @@ class AccountForm(forms.ModelForm):
 
         # Check to see if any account already exist with this email as a username.
         try:
-            match = CustomUser.objects.get(email = email)
+            CustomUser.objects.get(email=email)
         except:
             # Unable to find a user, this is fine
             return email
