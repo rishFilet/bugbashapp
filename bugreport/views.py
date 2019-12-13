@@ -17,7 +17,8 @@ def create_report(request):
                 form.save()
                 # Add dictionary data to the database
                 #  todo : refactor to bug report page
-                return redirect(request.META['HTTP_REFERER'], messages.success(request, message))
+                return redirect(request.META['HTTP_REFERER'], messages.success(request,
+                                                                               message))
             except:  # todo: refactor. Exception clause too broad
                 message = "ERROR: Could not log bug successfully"
                 #  todo : refactor to bug report page

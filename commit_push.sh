@@ -8,8 +8,8 @@ then
     echo What is your commit message?
     read m
     git commit -m "$m"
-    git fetch upstream
-    git rebase usptream/master
+    git fetch origin
+    git rebase origin/master
     git push
     echo "Damn you are lit..thanks for pushing"
 elif [ "$answer" == "n" ]
