@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 
-{% block body %}
-    <div class="container ">
-        <h2>Register</h2>
-        <form method="post" novalidate>
-            {% csrf_token %}
-            {% include 'includes/form.html' %}
-            <button type="submit" class="btn btn-primary">Create an account</button>
-        </form>
+{% block content %}
+<div class="container full-height">
+    <div class="row align-items-center">
+        <div class="screen-container">
+            <h2>Register</h2>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% include 'includes/form.html' %}
+                <button type="submit" class="btn btn-primary">Create an account</button>
+            </form>
+        </div>
     </div>
-{% endblock body %}
+</div>
+{% endblock content %}
