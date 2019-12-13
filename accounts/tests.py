@@ -26,7 +26,7 @@ class RegisterTest(TestCase):
             'password2': 'Test3Test#'
         }
         self.response = self.client.post(url, data)
-        self.home_url = reverse('home')
+        self.home_url = reverse('bugreport')
 
     def test_signup_status_code(self):
         url = reverse('register')
