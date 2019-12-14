@@ -1,5 +1,4 @@
 from django.db import models
-from django.forms import ModelForm
 
 
 # Create your models here.
@@ -36,15 +35,3 @@ class BugLogStructure(models.Model):
     summary = models.CharField(max_length=100)
     steps = models.CharField(max_length=100)
     result = models.TextField(max_length=500, default="Enter a descriptive result here")
-
-
-class BugLogForm(ModelForm):
-    class Meta:
-        model = BugLogStructure
-        fields = [
-            ReportFields.DEVICE,
-            ReportFields.FEATURE,
-            ReportFields.SUMMARY,
-            ReportFields.STEPS,
-            ReportFields.RESULT
-        ]

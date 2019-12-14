@@ -1,8 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-
-from . import models
+from bugreport.forms import BugLogForm
 
 
 # Create your views here.
@@ -10,7 +9,7 @@ from . import models
 def create_report(request):
     submitted = False
     if request.method == 'POST':
-        form = models.BugLogForm(request.POST)
+        form = BugLogForm(request.POST)
         if form.is_valid():
             try:
                 message = "SUCCESS: Bug Report Submitted"
@@ -24,6 +23,6 @@ def create_report(request):
                 #  todo : refactor to bug report page
                 return redirect('/bugreport/', messages.error(request, message))
     else:
-        form = models.BugLogForm()
+        form = BugLogForm()
 
     return render(request, 'bugreport.html', {'form': form, 'submitted': submitted})
