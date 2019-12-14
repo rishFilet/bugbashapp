@@ -13,7 +13,9 @@ def create_report(request):
         if form.is_valid():
             try:
                 message = "SUCCESS: Bug Report Submitted"
-                form.save()
+                bug = form.save(commit=False)
+                bug.user = request.user
+                bug.save()
                 # Add dictionary data to the database
                 return redirect(request.META['HTTP_REFERER'], messages.success(request,
                                                                                message))

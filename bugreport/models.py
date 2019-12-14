@@ -2,6 +2,9 @@ from django.db import models
 
 
 # Create your models here.
+from accounts.models import CustomUser
+
+
 class ReportFields(models.Model):
     DEVICE = 'device'
     FEATURE = "feature"
@@ -29,6 +32,7 @@ class Features(models.Model):
 
 
 class BugLogStructure(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     device = models.CharField(max_length=50, choices=Devices.DEVICE_LIST,
                               default=Devices.DEVICE_LIST[0])
     feature = models.CharField(max_length=50, choices=Features.FEATURE_LIST, default=Features.FEATURE_LIST[0])
