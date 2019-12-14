@@ -20,4 +20,3 @@ class ResolversTest(TestCase):
     def test_register_url_resolves_to_register_view(self):
         view = resolve('/register/')
         self.assertEquals(view.func, register)
-

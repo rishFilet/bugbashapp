@@ -1,18 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'base_accounts.html' %}
 
 {% block content %}
 {% for message in messages %}
 {% if "Welcome" in message|stringformat:"s" or "SUCCESS" in message|stringformat:"s"%}
 <div class="alert alert-success">
     <a class="close" href="#" data-dismiss="alert">×</a>
-
     {{ message }}
 </div>
 
 {% else %}
 <div class="alert alert-danger">
     <a class="close" href="#" data-dismiss="alert">×</a>
-
     {{ message }}
 </div>
 {% endif %}

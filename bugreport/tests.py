@@ -8,7 +8,7 @@ from accounts.models import CustomUser
 class CreateReportTests(TestCase):
     def setUp(self) -> None:
         username = 'test@test.com'
-        password ='Test3Test#'
+        password = 'Test3Test#'
         CustomUser.objects.create_user(email=username, password=password)
         self.url = reverse('bug_report')
         data = {

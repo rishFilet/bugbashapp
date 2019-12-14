@@ -12,17 +12,17 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect('/bugreport/')
     else:
-        user_login = UserLogin(data = request.POST)
+        user_login = UserLogin(data=request.POST)
         if request.method == 'POST':
             email = user_login.data.get('email')
             password = user_login.data.get('password')
-            user = authenticate(request, username = email, password = password)
+            user = authenticate(request, username=email, password=password)
             if user is not None:
                 auth_login(request, user)
                 msgs.success(request, 'Welcome to the Bug bash {}'.format(user.first_name))
                 return HttpResponseRedirect('/bugreport/')
 
-            elif CustomUser.objects.filter(email = email).exists():
+            elif CustomUser.objects.filter(email=email).exists():
                 msgs.error(request, 'Wrong password for user: {}'.format(email))
                 return render(request, 'login.html', {'user_login': user_login})
             else:
@@ -40,7 +40,7 @@ def logout_view(request):
 
 
 def register(request):
-    register_form = RegisterForm(data = request.POST)
+    register_form = RegisterForm(data=request.POST)
     if request.method == 'POST':
         msg = "Unable to create account"
         if register_form.is_valid():
