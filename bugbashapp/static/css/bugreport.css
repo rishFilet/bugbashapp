@@ -1,0 +1,32 @@
+
+#report-container {
+    padding: 1%;
+}
+
+#report-container .device-select-form {
+    padding: 1em;
+    width: 20%;
+    display: inline-block;
+}
+
+#report-container .report-form {
+    padding: 1em;
+    width: 50%;
+    display: inline-block;
+}
+
+#report-form .step-input {
+    rows: 5;
+}
+
+#report-form .result-input {
+    rows: 5;
+    margin-bottom: 10%;
+}
+
+#report-form .submit-btn {
+    display: inline-block;
+}
+.clearfix{
+    clear:both
+}

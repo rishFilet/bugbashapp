@@ -37,5 +37,5 @@ class BugLogStructure(models.Model):
                               default=Devices.DEVICE_LIST[0])
     feature = models.CharField(max_length=50, choices=Features.FEATURE_LIST, default=Features.FEATURE_LIST[0])
     summary = models.CharField(max_length=100)
-    steps = models.CharField(max_length=100)
-    result = models.TextField(max_length=500, default="Enter a descriptive result here")
+    steps = models.TextField(max_length=350)
+    result = models.TextField(max_length=500)

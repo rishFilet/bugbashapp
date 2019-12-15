@@ -1,4 +1,11 @@
-{% extends 'base_accounts.html' %}
+{% extends 'base.html' %}
+{% load form_tags widget_tweaks %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/bugreport.css' %}">
+{% endblock %}
+
 
 {% block content %}
 {% for message in messages %}
@@ -15,25 +22,105 @@
 </div>
 {% endif %}
 {% endfor %}
+<div id="report-container">
+        <form action=""  method="post" novalidate >
+            {% csrf_token %}
+            <div class="device-select-form">
+                {% if submitted %}
+                    <p class="success">
+                        Your message was submitted successfully. Thank you.
+                    </p>
+                {% else %}
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            {{ form.device.label_tag }}
+                            {% render_field form.device class=form.device|input_class %}
+                            {% for error in form.device.errors %}
+                            <div class="invalid-feedback">
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                            {% if form.device.help_text %}
+                            <small class="form-text text-muted">
+                                {{ form.device.help_text|safe }}
+                            </small>
+                            {% endif %}
+                        </div>
+                        <div>
+                            {{ form.feature.label_tag }}
+                            {% render_field form.feature class=form.feature|input_class %}
+                            {% for error in form.feature.errors %}
+                            <div class="invalid-feedback">
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                            {% if form.feature.help_text %}
+                            <small class="form-text text-muted">
+                                {{ form.feature.help_text|safe }}
+                            </small>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="report-form">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                {{ form.summary.label_tag }}
+                                {% render_field form.summary class=form.summary|input_class %}
+                                {% for error in form.summary.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% if form.summary.help_text %}
+                                <small class="form-text text-muted">
+                                    {{ form.summary.help_text|safe }}
+                                </small>
+                                {% endif %}
+                            </div>
+                            <div class="step-input">
+                                {{ form.steps.label_tag }}
+                                {% render_field form.steps class=form.steps|input_class %}
+                                {% for error in form.steps.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% if form.steps.help_text %}
+                                <small class="form-text text-muted">
+                                    {{ form.steps.help_text|safe }}
+                                </small>
+                                {% endif %}
+                            </div>
+                            <div class="result-input">
+                                {{ form.result.label_tag }}
+                                {% render_field form.result class=form.result|input_class %}
+                                {% for error in form.result.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% if form.result.help_text %}
+                                <small class="form-text text-muted">
+                                    {{ form.result.help_text|safe }}
+                                </small>
+                                {% endif %}
+                            </div>
+                            <div class="submit-btn">
+                                <button id="submit-report-btn" type="submit" class="btn btn-primary">
+                                    Submit Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
 
-<div class="screen-container">
-    {% if submitted %}
-    <p class="success">
-        Your message was submitted successfully. Thank you.
-    </p>
-
-    {% else %}
-    <form action="" method="post" novalidate>
-        <table>
-            {{ form.as_table }}
-            <tr>
-                <td>&nbsp;</td>
-                <td><input type="submit" value="Submit"></td>
-            </tr>
-        </table>
-        {% csrf_token %}
-    </form>
-    {% endif %}
+        </form>
+    </div>
+    <div class="clearfix"></div>
 </div>
-
 {% endblock content %}
