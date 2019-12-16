@@ -48,7 +48,7 @@ class RegisterTest(TestCase):
             'password2': 'Test3Test#'
         }
         self.response = self.client.post(self.url, data)
-        self.bug_report_url = reverse('bug_report')
+        self.bug_home_url = reverse('home')
 
     def test_signup_status_code(self):
         response = self.client.get(self.url)
@@ -59,4 +59,4 @@ class RegisterTest(TestCase):
         self.assertEquals(view.func, register)
 
     def test_create_account_resolves_to_bugreport_page(self):
-        self.assertRedirects(self.response, self.bug_report_url)
+        self.assertRedirects(self.response, self.bug_home_url)
