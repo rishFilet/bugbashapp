@@ -1,0 +1,21 @@
+{% extends 'base_accounts.html' %}
+
+{% block title %}Start Page{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h2>Register your bug bashing session!</h2>
+                <form class="reg-login-form" method="post" novalidate>
+                    {% csrf_token %}
+                    {% include 'includes/form.html' %}
+                    <button type="submit" class="btn btn-primary">Start Bashing</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

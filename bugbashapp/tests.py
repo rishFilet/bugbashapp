@@ -3,7 +3,7 @@
 from django.test import TestCase
 from django.urls import resolve
 
-from bugreport.views import create_report
+from bugreport.views import create_bashing_session
 from accounts.views import login_view, register
 
 
@@ -15,7 +15,7 @@ class ResolversTest(TestCase):
 
     def test_home_url_resolves_to_home_view(self):
         view = resolve('/home/')
-        self.assertEquals(view.func, create_report)
+        self.assertEquals(view.func, create_bashing_session)
 
     def test_register_url_resolves_to_register_view(self):
         view = resolve('/register/')

@@ -39,3 +39,8 @@ class BugLogStructure(models.Model):
     summary = models.CharField(max_length=100)
     steps = models.TextField(max_length=350)
     result = models.TextField(max_length=500)
+
+class BashSessionInfo(models.Model):
+	device = models.CharField(max_length=50, choices=Devices.DEVICE_LIST,
+							  default=Devices.DEVICE_LIST[0])
+	feature = models.CharField(max_length=50, choices=Features.FEATURE_LIST, default=Features.FEATURE_LIST[0])

@@ -10,7 +10,7 @@ from .models import CustomUser
 def login_view(request):
     clr.clear_msgs(request)
     if request.user.is_authenticated:
-        return redirect('/bugreport/')
+        return redirect('/home/')
     else:
         user_login = UserLogin(data = request.POST)
         if request.method == 'POST':
@@ -20,7 +20,7 @@ def login_view(request):
             if user is not None:
                 auth_login(request, user)
                 msgs.success(request, 'Welcome to the Bug bash {}'.format(user.first_name))
-                return HttpResponseRedirect('/bugreport/')
+                return HttpResponseRedirect('/home/')
 
             elif CustomUser.objects.filter(email = email).exists():
                 msgs.error(request, 'Wrong password for user: {}'.format(email))
@@ -49,7 +49,7 @@ def register(request):
             user = register_form.save()
             auth_login(request, user)
             msgs.success(request, "You are registered!")
-            return HttpResponseRedirect('/bugreport/')
+            return HttpResponseRedirect('/home/')
         else:
             try:
                 if 'This email address is already in use' in register_form.errors['email'][0]:
