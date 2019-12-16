@@ -6,3 +6,4 @@ from .models import Leaderboard
 class LeaderBoardTable(tables.Table):
     class Meta:
         model = Leaderboard
+        attrs = {"class": "table", "thead": {"class": "thead-dark"}}
