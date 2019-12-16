@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'bugreport',
     'accounts.apps.AccountsConfig',
+    'leaderboard',
+    'django_tables2',
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
