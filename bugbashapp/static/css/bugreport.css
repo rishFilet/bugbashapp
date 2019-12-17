@@ -42,6 +42,19 @@
 #report-form .submit-btn {
     display: inline-block;
 }
-.clearfix{
-    clear:both
+
+div.popup-overlay {
+	visibility: hidden;
+}
+
+div.popup-content {
+	visibility: hidden;
+}
+
+div.popup-overlay .active {
+	visibility: visible;
+}
+
+div.popup-content .active {
+	visibility: visible;
 }

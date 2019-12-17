@@ -11,16 +11,32 @@
 
 
 {% block content %}
+<style>
+	div.popup-overlay {
+		visibility: hidden;
+	}
+
+	div.popup-content {
+		visibility: hidden;
+	}
+
+	div.popup-overlay .active {
+		visibility: visible;
+	}
+
+	div.popup-content .active {
+		visibility: visible;
+	}
+</style>
+	<div class="popup-overlay">
+		<div class="popup-content">
+			<h2>Bug Bash Session has ended!</h2>
+			<p> please check Leaderboard for the result</p>
+		</div>
+	</div>
+
 <div id="countdown">this is countdown
-	<script>
-		$("#countdown").countdown({until: +30, format: 'MS', onExpiry: liftOff});
-		function liftOff(){
-			console.log("time done")
-<!--			$("#testing").show();-->
-<!--			shortly.setDate(shortly.getDate()+1);-->
-<!--			$("#countdown").countdown('option',{until:shortly})-->
-		}
-	</script>
+	<script src="{% static 'js/timer.js' %}"></script>
 </div>
 <div id="report-container">
     <div class="form-container">
