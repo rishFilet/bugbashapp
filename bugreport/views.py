@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from bugreport.forms import BugLogForm, BashSessionForm
-from leaderboard.models import Leaderboard
+from leaderboard.views import update_lb
 from utils import clear_messages as clr
 
 
@@ -32,16 +32,6 @@ def create_report(request):
         form = BugLogForm(
             initial = {'device': request.session['device'], 'feature': request.session['feature']})
     return render(request, 'bugreport.html', {'form': form, 'submitted': submitted})
-
-
-def update_lb(request):
-    total = Leaderboard.objects.get(first_name = request.user.first_name,
-                                    last_name = request.user.last_name).total + 1
-    data = {"total": total}
-    obj, created = Leaderboard.objects.update_or_create(first_name = request.user.first_name,
-                                                        last_name = request.user.last_name,
-                                                        defaults = data)
-    print(obj, created)
 
 
 @login_required
