@@ -14,3 +14,6 @@ class Leaderboard(models.Model):
     SWITCH = models.PositiveIntegerField(default = 0, blank = True)
     ECO_PLUS = models.PositiveIntegerField(default = 0, blank = True)
     total = models.PositiveIntegerField(default = 0, blank = True)
+
+    def __str__(self):
+        return self.first_name

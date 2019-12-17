@@ -7,24 +7,6 @@
 {% endblock %}
 
 {% block content %}
-
-{% for message in messages %}
-{% if "You are registered!" in message|stringformat:"s" or "successfully" in message|stringformat:"s" %}
-<div class="alert alert-success">
-    <a class="close" href="#" data-dismiss="alert">×</a>
-
-    {{ message }}
-</div>
-
-{% else %}
-<div class="alert alert-danger">
-    <a class="close" href="#" data-dismiss="alert">×</a>
-
-    {{ message }}
-</div>
-{% endif %}
-{% endfor %}
-
 <div class="row justify-content-center">
     <div class="col-lg-8 col-md-10 col-sm-12">
         <div class="card">

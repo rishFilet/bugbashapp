@@ -41,6 +41,15 @@ html, body {
 }
 
 .table-container{
-    background-color: #343a40;
     padding: 1% 2% 0% 2%
+}
+
+.submit-btn{
+    padding:0.5rem;
+    float:right;
+}
+
+#submit-report-btn{
+    background-color: #5bbd76;
+    border-color: #5bbd76;
 }

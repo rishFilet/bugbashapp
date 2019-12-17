@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 from accounts.models import CustomUser
 
@@ -32,15 +31,18 @@ class Features(models.Model):
 
 
 class BugLogStructure(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    device = models.CharField(max_length=50, choices=Devices.DEVICE_LIST,
-                              default=Devices.DEVICE_LIST[0])
-    feature = models.CharField(max_length=50, choices=Features.FEATURE_LIST, default=Features.FEATURE_LIST[0])
-    summary = models.CharField(max_length=100)
-    steps = models.TextField(max_length=350)
-    result = models.TextField(max_length=500)
+    user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
+    device = models.CharField(max_length = 50, choices = Devices.DEVICE_LIST,
+                              default = Devices.DEVICE_LIST[0])
+    feature = models.CharField(max_length = 50, choices = Features.FEATURE_LIST,
+                               default = Features.FEATURE_LIST[0])
+    summary = models.CharField(max_length = 100)
+    steps = models.TextField(max_length = 350, default = "1. \n2.\n3.\n4.")
+    result = models.TextField(max_length = 500, default = "Actual:\n\nExpected:\n")
+
 
 class BashSessionInfo(models.Model):
-	device = models.CharField(max_length=50, choices=Devices.DEVICE_LIST,
-							  default=Devices.DEVICE_LIST[0])
-	feature = models.CharField(max_length=50, choices=Features.FEATURE_LIST, default=Features.FEATURE_LIST[0])
+    device = models.CharField(max_length = 50, choices = Devices.DEVICE_LIST,
+                              default = Devices.DEVICE_LIST[0])
+    feature = models.CharField(max_length = 50, choices = Features.FEATURE_LIST,
+                               default = Features.FEATURE_LIST[0])

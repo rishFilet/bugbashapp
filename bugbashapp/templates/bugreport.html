@@ -8,20 +8,6 @@
 
 
 {% block content %}
-{% for message in messages %}
-{% if "Welcome" in message|stringformat:"s" or "You are registered!" in message|stringformat:"s"%}
-<div class="alert alert-success">
-    <a class="close" href="#" data-dismiss="alert">×</a>
-    {{ message }}
-</div>
-
-{% else %}
-<div class="alert alert-danger">
-    <a class="close" href="#" data-dismiss="alert">×</a>
-    {{ message }}
-</div>
-{% endif %}
-{% endfor %}
 <div id="report-container">
     <form action="" method="post" novalidate>
         {% csrf_token %}
