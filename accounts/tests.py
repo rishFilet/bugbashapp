@@ -4,7 +4,7 @@ from django.urls import reverse, resolve
 
 from accounts.models import CustomUser
 from accounts.views import register, login_view
-from bugreport.views import create_report
+from bugreport.views import  create_user_bug_view
 
 
 class InvalidLoginTests(TestCase):
@@ -34,7 +34,7 @@ class ValidLoginTests(TestCase):
 
     def test_redirect_to_bug_report_page(self):
         view = resolve('/bugreport/')
-        self.assertEquals(view.func, create_report)
+        self.assertEquals(view.func, create_user_bug_view)
 
 
 class RegisterTest(TestCase):
