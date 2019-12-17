@@ -1,5 +1,6 @@
 import json
 
+from django.contrib import messages
 from django.db.utils import IntegrityError
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
@@ -37,7 +38,6 @@ def create_report(request):
                 steps=request.POST.get('steps'),
                 result=request.POST.get('result'))
             logged_bug.save()
-            update_lb(request)
             response_data = {
                 'summary': request.POST.get('summary')
             }

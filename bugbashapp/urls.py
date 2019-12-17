@@ -25,8 +25,8 @@ urlpatterns = [
     path('register/', user_view.register, name="register"),
     path('login/', user_view.login_view, name="login_view"),
     path('home/', Report.create_bashing_session, name="home"),
-    path('leaderboard/', lb.leaderboard_list, name = "leaderboard_view"),
-    path('bugreport/', Report.create_report, name="bug_report"),
+    path('leaderboard/', lb.leaderboard_list, name="leaderboard_view"),
+    path('bugreport/', Report.create_user_bug_view, name="bug_report"),
     path('bugreport/create_report/', Report.create_report, name='ajax_bugreport_create'),
     path('logout/', user_view.logout_view, name="logout_view")
 ]
