@@ -1,37 +1,55 @@
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+import json
 
+from django.db.utils import IntegrityError
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render, redirect
 from bugreport.forms import BugLogForm, BashSessionForm
 from leaderboard.views import update_lb
 from utils import clear_messages as clr
 
 
 # Create your views here.
+from bugreport.models import BugLogStructure
+
+
+@login_required
+def create_user_bug_view(request):
+    clr.clear_msgs(request)
+    template_vars = {
+        'all_bugs': BugLogStructure.objects.reverse(),
+        'form': BugLogForm(
+            initial = {'device': request.session['device'], 'feature': request.session['feature']})
+    }
+    return render(request, 'bugreport.html', template_vars)
+
+
 @login_required
 def create_report(request):
-    submitted = False
     clr.clear_msgs(request)
-
     if request.method == 'POST':
-        form = BugLogForm(request.POST)
-        if form.is_valid():
-            try:
-                message = "SUCCESS: Bug Report Submitted"
-                bug = form.save(commit = False)
-                bug.user = request.user
-                bug.save()
-                update_lb(request)
-                # Add dictionary data to the database
-                return redirect(request.META['HTTP_REFERER'], messages.success(request,
-                                                                               message))
-            except:  # todo: refactor. Exception clause too broad
-                message = "ERROR: Could not log bug"
-                return redirect('/bugreport/', messages.error(request, message))
+        try:
+            logged_bug = BugLogStructure(
+                user=request.user,
+                device=request.POST.get('device'),
+                feature=request.POST.get('feature'),
+                summary=request.POST.get('summary'),
+                steps=request.POST.get('steps'),
+                result=request.POST.get('result'))
+            logged_bug.save()
+            update_lb(request)
+            response_data = {
+                'summary': request.POST.get('summary')
+            }
+            return JsonResponse(response_data)
+        except IntegrityError:
+            raise
     else:
-        form = BugLogForm(
-            initial = {'device': request.session['device'], 'feature': request.session['feature']})
-    return render(request, 'bugreport.html', {'form': form, 'submitted': submitted})
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"}),
+            content_type="application/json"
+        )
+
 
 
 @login_required

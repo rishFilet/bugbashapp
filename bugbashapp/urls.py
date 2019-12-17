@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from bugreport import views as Report
 from accounts import views as user_view
 from leaderboard import views as lb
@@ -25,8 +24,9 @@ urlpatterns = [
     path('', user_view.login_view, name='landing'),
     path('register/', user_view.register, name="register"),
     path('login/', user_view.login_view, name="login_view"),
-    path('bugreport/', Report.create_report, name="bug_report"),
     path('home/', Report.create_bashing_session, name="home"),
-    path('logout/', user_view.logout_view, name="logout_view"),
-	path('leaderboard/', lb.leaderboard_list, name = "leaderboard_view")
+    path('leaderboard/', lb.leaderboard_list, name = "leaderboard_view"),
+    path('bugreport/', Report.create_report, name="bug_report"),
+    path('bugreport/create_report/', Report.create_report, name='ajax_bugreport_create'),
+    path('logout/', user_view.logout_view, name="logout_view")
 ]

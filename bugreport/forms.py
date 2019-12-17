@@ -15,8 +15,18 @@ class BugLogForm(forms.ModelForm):
             ReportFields.RESULT
         ]
         widgets = {
-            'steps': forms.Textarea(attrs={'rows': 6}),
-            'result': forms.Textarea(attrs={'rows': 6}),
+            'summary': forms.TextInput(attrs={
+                'required': True,
+                'placeholder': 'Enter Summary...'
+            }),
+            'steps': forms.Textarea(attrs={
+                'rows': 6,
+                'placeholder': 'Enter Descriptive Steps To Reproduce issue'
+            }),
+            'result': forms.Textarea(attrs={
+                'rows': 6,
+                'placeholder': 'Enter Expected and Actual Result'
+            }),
         }
 
 class BashSessionForm(forms.ModelForm):
