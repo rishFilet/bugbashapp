@@ -4,10 +4,24 @@
 
 {% block stylesheet %}
 <link rel="stylesheet" href="{% static 'css/bugreport.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.countdown.css' %}">
+<script type="text/javascript" src="{% static 'js/jquery.plugin.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.countdown.js' %}"></script>
 {% endblock %}
 
 
 {% block content %}
+<div id="countdown">this is countdown
+	<script>
+		$("#countdown").countdown({until: +30, format: 'MS', onExpiry: liftOff});
+		function liftOff(){
+			console.log("time done")
+<!--			$("#testing").show();-->
+<!--			shortly.setDate(shortly.getDate()+1);-->
+<!--			$("#countdown").countdown('option',{until:shortly})-->
+		}
+	</script>
+</div>
 <div id="report-container">
     <div class="form-container">
         <form id="addBug" action="/bugreport/"  method="post" novalidate >
