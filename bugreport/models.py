@@ -15,18 +15,28 @@ class ReportFields(models.Model):
 class Devices(models.Model):
     IPHONE6S = "6s"
     IPADMINI = "Mini"
+    ANDROIDPIXEL = "Pixel"
     DEVICE_LIST = [
         (IPHONE6S, "Iphone 6s 20140928"),
-        (IPADMINI, "Ipad Mini 20142706")
+        (IPADMINI, "Ipad Mini 20142706"),
+        (ANDROIDPIXEL, "Google Pixel 20143536")
     ]
 
 
 class Features(models.Model):
     THEIA = "Camera"
-    TSTAT_REG = "Tstat Reg"
+    TSTAT = "Tstat"
+    SENSORS = "Sensors"
+    LS = "Ls"
+    ECO = "Eco_plus"
+    IRIS = "Iris"
     FEATURE_LIST = [
         (THEIA, "Theia/Camera"),
-        (TSTAT_REG, "Tstat Registration")
+        (TSTAT, "Thermostat"),
+        (SENSORS, "Hecate/Rhodos"),
+        (LS, "Light Switch"),
+        (ECO, "Chronos/Eco+"),
+        (IRIS, "Iris/Home monitoring/Invisible Guard")
     ]
 
 

@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
 from bugreport.forms import BugLogForm, BashSessionForm
-from leaderboard.views import update_lb
 from utils import clear_messages as clr
 
 
