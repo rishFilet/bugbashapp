@@ -9,6 +9,7 @@
 
 {% block content %}
 <div id="report-container">
+    <div class="form-container">
         <form id="addBug" action="/bugreport/"  method="post" novalidate >
             {% csrf_token %}
             <div class="device-select-form">
@@ -113,9 +114,7 @@
                 </div>
         </form>
     </div>
-    <div class="clearfix"></div>
-</div>
-<div class="col-md-8">
+    <div class="bug-list-container">
         <h3>Bug Reports</h3>
         <table id="userBugTable" class="table table-striped">
           <tr>
@@ -133,6 +132,8 @@
             </tbody>
         </table>
       </div>
+</div>
+
 {% endblock content %}
 {% block javascript %}
     <script src="{% static 'js/main.js' %}"></script>
