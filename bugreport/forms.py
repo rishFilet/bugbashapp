@@ -29,10 +29,11 @@ class BugLogForm(forms.ModelForm):
             }),
         }
 
+
 class BashSessionForm(forms.ModelForm):
-	class Meta:
-		model = BashSessionInfo
-		fields = [
-			ReportFields.FEATURE,
-			ReportFields.DEVICE
-		]
+    class Meta:
+        model = BashSessionInfo
+        fields = [
+            ReportFields.FEATURE,
+            ReportFields.DEVICE
+]
