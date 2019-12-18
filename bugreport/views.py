@@ -21,6 +21,7 @@ def create_user_bug_view(request):
         'form': BugLogForm(
             initial={'device': request.session['device'], 'feature': request.session['feature']})
     }
+
     return render(request, 'bugreport.html', template_vars)
 
 
@@ -79,7 +80,22 @@ def create_bashing_session(request):
 
 @login_required
 def update_bug(request):
-    print("Test")
+    if request.method == "GET":
+        bug_id = request.GET['id']
+
+        # Get the bug data for this user and bug id
+        obj = BugLogStructure.objects.filter(user=request.user).get(id=bug_id)
+
+        data = {
+            'id': bug_id,
+            'summary': obj.summary,
+            'device': obj.device,
+            'steps': obj.steps,
+            'result': obj.result
+        }
+
+        return JsonResponse(data)
+
     if request.method == "POST":
         id1 = request.POST.get('id', None)
         new_summary = request.POST.get('summary', None)
