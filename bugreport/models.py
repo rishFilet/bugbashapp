@@ -31,12 +31,12 @@ class Features(models.Model):
     ECO = "Eco_plus"
     IRIS = "Iris"
     FEATURE_LIST = [
-        (THEIA, "Theia/Camera"),
+        (THEIA, "Theia / Camera"),
         (TSTAT, "Thermostat"),
-        (SENSORS, "Hecate/Rhodos"),
+        (SENSORS, "Hecate / Rhodos"),
         (LS, "Light Switch"),
-        (ECO, "Chronos/Eco+"),
-        (IRIS, "Iris/Home monitoring/Invisible Guard")
+        (ECO, "Chronos / Eco+"),
+        (IRIS, "Home monitoring / Iris")
     ]
 
 
