@@ -7,16 +7,26 @@
     <div class="col-lg-8 col-md-10 col-sm-12">
         <div class="card">
             <div class="card-body">
-                <h2>Register your bug bashing session!</h2>
-				<p style="font-size:20px;">here goes the instructions</p>
-				<p style="font-size:20px;">1. 1st</p>
-				<p style="font-size:20px;">2. 2nd</p>
-				<p style="font-size:20px;">3. 3rd</p>
-				<p style="font-size:20px;">4. 4th</p>
+                <h2>Begin your bug bashing session!</h2>
+                <p style="font-size:20px;">HOW IT WORKS:</p>
+                <p style="font-size:20px;">1. Select the device that you are using for the session</p>
+                <p style="font-size:20px;">2. Select the feature that you will be primarily testing (during the session,
+                    you can edit this, if you find a bug in another area of the app)</p>
+                <p style="font-size:20px;">3. Once you are ready, hit 'Start Bashing' button and a timer for 20 minutes
+                    will start the session</p>
+                <p style="font-size:20px;">4. In 20 minutes, log as many bugs as you can find in the app. Once the timer
+                    is up, you can no longer submit any more bugs for this bug bash session</p>
+                <p style="font-size:20px;">5. QA will verify the bugs reported and update the leaderboard. Check the
+                    leaderboard at anytime after the bug bash week to determine your rank</p>
+                <p style="font-size:20px;">Prizes will be awarded for top 3 and a trophy for the first place</p>
+                <p style="font-size:20px;">Thank you for bashing and improving the Ecobee Mobile App</p>
                 <form class="reg-login-form" method="post" novalidate>
                     {% csrf_token %}
                     {% include 'includes/form.html' %}
-                    <button type="submit" class="btn btn-primary">Start Bashing</button>
+                    <button type="submit" class="btn btn-primary"
+                            style="float: right; background-color:#5bbd76;border-color:#5bbd76;">Start
+                        Bashing
+                    </button>
                 </form>
             </div>
         </div>
