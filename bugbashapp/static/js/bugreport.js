@@ -48,3 +48,4 @@ function deleteBug(id) {
     });
   }
 }
+
