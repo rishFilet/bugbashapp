@@ -30,7 +30,7 @@ $(function() {
                 $('#id_result').val(''); // remove the value from the                                                     input
                 console.log("success"); // another sanity check
                 if (response.summary) {
-                    $("#userBugTableBody").append('<tr><td>'+response.summary+'</td><td align="center"><button  class="btn btn-primary" onclick="editBug({{'+response.id+'}})" data-toggle="modal" data-target="#myModal">EDIT</button></td>');
+                    $("#userBugTableBody").append('<tr id="bug-'+response.id+'"><td>'+response.summary+'</td><td align="center"><button  class="btn btn-primary" onclick="editBug('+response.id+')" data-toggle="modal" data-target="#myModal">EDIT</button></td><td align="center"><button class="btn btn-danger form-control" onClick="deleteBug({{bug.id}})">DELETE</button></td>');
                 };
             },
 //            // handle a non-successful response
