@@ -1,25 +1,18 @@
-$(function() {
 
-    // This function gets cookie with a given name
+$(function() {
     $('#submit-report-btn').on('click', function(event){
-       event.preventDefault();
-       console.log("Form Submitted")
-       console.log($('#id_device').val())
-       console.log($('#id_feature').val())
-       console.log($('#id_summary').val())
-       console.log($('#id_steps').val())
-       console.log($('#id_result').val())
-       create_bug();
+        event.preventDefault();
+        console.log("Form Submitted")
+        create_bug();
+    });
+
+    $('#editButton').on('click', function(event){
+        console.log("Some random stuff")
+//        editBug(event);
     });
 
     function create_bug() {
         console.log("create post is working!") // sanity check
-//        console.log($('#summary').val())
-////        console.log($('#device').val())
-////        console.log($('#feature').val())
-////        console.log($('#bug').val())
-////        console.log($('#steps').val())
-////        console.log($('#bug-report').val())}
         $.ajax({
             url : "create_report/", // the endpoint
             type : "POST", // http method
@@ -32,16 +25,17 @@ $(function() {
             },
 
             success : function(response) {
-                $('#summary').val(''); // remove the value from the input
-                $('#steps').val(''); // remove the value from the input
-                $('#result').val(''); // remove the value from the                                                     input
+                $('#id_summary').val(''); // remove the value from the input
+                $('#id_steps').val(''); // remove the value from the input
+                $('#id_result').val(''); // remove the value from the                                                     input
                 console.log("success"); // another sanity check
                 if (response.summary) {
-                    $("#userBugTableBody").prepend("<tr><td>"+response.summary+"</td></tr>");
+                    $("#userBugTableBody").append('<tr><td>'+response.summary+'</td><td align="center"><button  class="btn btn-primary" onclick="editBug({{'+response.id+'}})" data-toggle="modal" data-target="#myModal">EDIT</button></td>');
                 };
             },
 //            // handle a non-successful response
             error : function(xhr,errmsg,err) {
+                console.log('Something Went Wrong')
                 $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
                     " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
                 console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
@@ -49,6 +43,51 @@ $(function() {
         });
     };
 
+     $("#submit-update-bug").on('click', function(event) {
+        var idInput = $('input[name="formId"]').val().trim();
+        var summaryInput = $('input[name="formSummary"]').val().trim();
+        var stepsInput = $('input[name="formSteps"]').val().trim();
+        var resultInput = $('input[name="formResult"]').val().trim();
+        console.log(summaryInput)
+        console.log(stepsInput)
+        console.log(resultInput)
+        $.ajax({
+            url : "update/", // the endpoint
+            type : "POST", // http method
+            data: {
+                    'id': idInput,
+                    'summary': summaryInput,
+                    'steps': stepsInput,
+                    'result': resultInput
+            },
+            success : function(response) {
+                console.log("Executed this")
+                console.log(response)
+                if (bug.summary) {
+                      $("#userBugTableBody #bug-" + bug.id).children(".bugSummary").each(function() {
+                        var attr = $(this).attr("summary");
+                        $(this).text(bug.summary);
+                        });
+                    }
+            },
+//            // handle a non-successful response
+            error : function(xhr,errmsg,err) {
+                console.log("Some Error was here")
+                $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                    " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+                console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+                }
+            });
+        });
+
+
+
+    function updateToUserTable(bug){
+        $("#userBugTableBody #bug-" + bug.id).children(".bugSummary").each(function() {
+            var attr = $(this).attr("summary");
+            $(this).text(bug.summary);
+          });
+    }
     function getCookie(name) {
         var cookieValue = null;
         if (document.cookie && document.cookie != '') {

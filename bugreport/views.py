@@ -1,13 +1,13 @@
 import json
 
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from django.db.utils import IntegrityError
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
-
+from django.views.generic.base import View
 from bugreport.forms import BugLogForm, BashSessionForm
-# Create your views here.
+from utils import clear_messages as clr
 from bugreport.models import BugLogStructure
 from utils import clear_messages as clr
 from utils.bug_bash_switch import switch as sw
@@ -17,9 +17,9 @@ from utils.bug_bash_switch import switch as sw
 def create_user_bug_view(request):
     clr.clear_msgs(request)
     template_vars = {
-        'all_bugs': BugLogStructure.objects.reverse(),
+        'all_bugs': BugLogStructure.objects.filter(user=request.user).reverse(),
         'form': BugLogForm(
-            initial = {'device': request.session['device'], 'feature': request.session['feature']})
+            initial={'device': request.session['device'], 'feature': request.session['feature']})
     }
     return render(request, 'bugreport.html', template_vars)
 
@@ -30,14 +30,15 @@ def create_report(request):
     if request.method == 'POST':
         try:
             logged_bug = BugLogStructure(
-                user = request.user,
-                device = request.POST.get('device'),
-                feature = request.POST.get('feature'),
-                summary = request.POST.get('summary'),
-                steps = request.POST.get('steps'),
-                result = request.POST.get('result'))
+                user=request.user,
+                device=request.POST.get('device'),
+                feature=request.POST.get('feature'),
+                summary=request.POST.get('summary'),
+                steps=request.POST.get('steps'),
+                result=request.POST.get('result'))
             logged_bug.save()
             response_data = {
+                'id': logged_bug.id,
                 'summary': request.POST.get('summary')
             }
             return JsonResponse(response_data)
@@ -46,7 +47,7 @@ def create_report(request):
     else:
         return HttpResponse(
             json.dumps({"nothing to see": "this isn't happening"}),
-            content_type = "application/json"
+            content_type="application/json"
         )
 
 
@@ -74,3 +75,25 @@ def create_bashing_session(request):
         form = BashSessionForm()
     messages.info(request, sw().status())
     return render(request, 'startpage.html', {'form': form, 'submitted': submitted})
+
+
+@login_required
+def update_bug(request):
+    print("Test")
+    if request.method == "POST":
+        id1 = request.POST.get('id', None)
+        new_summary = request.POST.get('summary', None)
+        new_steps = request.POST.get('steps', None)
+        new_result = request.POST.get('result', None)
+
+        obj = BugLogStructure.objects.filter(user=request.user).get(id=id1)
+        obj.summary = new_summary
+        obj.steps = new_steps
+        obj.result = new_result
+        obj.save()
+
+        data = {
+            'id': obj.id,
+            'summary': obj.summary,
+        }
+        return JsonResponse(data)
