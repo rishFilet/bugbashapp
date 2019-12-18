@@ -19,7 +19,7 @@ def create_user_bug_view(request):
     template_vars = {
         'all_bugs': BugLogStructure.objects.filter(user=request.user).reverse(),
         'form': BugLogForm(
-            initial={'device': request.session['device'], 'feature': request.session['feature']}),
+            initial={'device': request.session['device'], 'feature': request.session['feature']})
     }
 
     return render(request, 'bugreport.html', template_vars)
