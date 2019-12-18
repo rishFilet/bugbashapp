@@ -97,3 +97,13 @@ def update_bug(request):
             'summary': obj.summary,
         }
         return JsonResponse(data)
+
+
+@login_required
+def delete_user_bug(request):
+    id1 = request.POST.get('id', None)
+    BugLogStructure.objects.filter(user=request.user).get(id=id1).delete()
+    data = {
+        'deleted': True
+    }
+    return JsonResponse(data)

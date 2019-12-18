@@ -133,7 +133,8 @@
         <table id="userBugTable" class="table table-striped">
           <tr>
             <th style="width: 70%;">Summary</th>
-            <th align="center">Action</th>
+            <th align="center">Edit</th>
+            <th align="center">Delete</th>
           </tr>
             <tbody id="userBugTableBody">
                 {% if all_bugs %}
@@ -142,6 +143,9 @@
                     <td class="bugSummary">{{ bug.summary }}</td>
                     <td align="center">
                         <button  class="btn btn-primary" onclick="editBug({{bug.id}})" data-toggle="modal" data-target="#myModal">EDIT</button>
+                    </td>
+                    <td align="center">
+                        <button class="btn btn-danger form-control" onClick="deleteBug({{bug.id}})">DELETE</button>
                     </td>
                 </tr>
                 {% endfor %}

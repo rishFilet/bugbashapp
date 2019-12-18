@@ -8,3 +8,21 @@ function editBug(bug_id) {
         $('#id_summary').val(summary);
       }
     }
+
+function deleteBug(id) {
+  var action = confirm("Are you sure you want to delete this Bug?");
+  if (action != false) {
+    $.ajax({
+        url : "delete/", // the endpoint
+        type : "POST", // http method
+        data: {
+            'id': id,
+        },
+        success: function (data) {
+            if (data.deleted) {
+              $("#userBugTable #bug-" + id).remove();
+            }
+        }
+    });
+  }
+}

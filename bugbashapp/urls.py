@@ -29,5 +29,6 @@ urlpatterns = [
     path('bugreport/', Report.create_user_bug_view, name="bug_report"),
     path('bugreport/create_report/', Report.create_report, name='ajax_bugreport_create'),
     path('bugreport/update/',  Report.update_bug, name='ajax_bugreport_update'),
+    path('bugreport/delete/',  Report.delete_user_bug, name='ajax_bugreport_delete'),
     path('logout/', user_view.logout_view, name="logout_view")
 ]
