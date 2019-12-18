@@ -1,4 +1,6 @@
 {% extends 'base_accounts.html' %}
+{% load static %}
+
 
 {% block title %}Start Page{% endblock %}
 
@@ -34,3 +36,6 @@
 </div>
 
 {% endblock content %}
+{% block javascript %}
+	<script src="{% static 'js/hidenavbar.js' %}"></script>
+{% endblock javascript %}
