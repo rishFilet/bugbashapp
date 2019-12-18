@@ -67,3 +67,6 @@ html, body {
     border-color: #5bbd76;
 }
 
+select {
+    width:100%;
+}
