@@ -34,41 +34,22 @@
                 {% else %}
                 <div class="card">
                     <div class="card-body">
-                        <div>
-                            <label for="id_device">Device:</label>
-                            <select name="device" class="form-control " id="id_device">
-                                <option value="6s" selected="">Iphone 6s 20140928</option>
-                                <option value="Mini">Ipad Mini 20142706</option>
 
-                            </select>
-                            {% for error in form.device.errors %}
-                            <div class="invalid-feedback">
-                                {{ error }}
-                            </div>
-                            {% endfor %}
-                            {% if form.device.help_text %}
-                            <small class="form-text text-muted">
-                                {{ form.device.help_text|safe }}
-                            </small>
-                            {% endif %}
+                        <label for="id_device">Device:</label>
+                        {{ form.device }}
+                        <label for="id_feature">Feature:</label>
+                        {{ form.feature }}
+
+                        {% for error in form.feature.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
                         </div>
-                        <div>
-                            <label for="id_feature">Feature:</label>
-                            <select name="feature" class="form-control " id="id_feature">
-                                <option value="Camera" selected="">Theia/Camera</option>
-                                <option value="Tstat Reg">Tstat Registration</option>
-                            </select>
-                            {% for error in form.feature.errors %}
-                            <div class="invalid-feedback">
-                                {{ error }}
-                            </div>
-                            {% endfor %}
-                            {% if form.feature.help_text %}
-                            <small class="form-text text-muted">
-                                {{ form.feature.help_text|safe }}
-                            </small>
-                            {% endif %}
-                        </div>
+                        {% endfor %}
+                        {% if form.feature.help_text %}
+                        <small class="form-text text-muted">
+                            {{ form.feature.help_text|safe }}
+                        </small>
+                        {% endif %}
                     </div>
                 </div>
             </div>
