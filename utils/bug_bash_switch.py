@@ -3,4 +3,4 @@ class switch:
     DISABLE = "Disable"
 
     def status(self):
-        return switch.ENABLE
+        return switch.DISABLE
