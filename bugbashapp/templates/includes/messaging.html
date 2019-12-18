@@ -5,13 +5,14 @@
 
     {{ message }}
 </div>
-{% elif message or message is False %}
-<div></div>
-{% else %}
+{% elif "Error:" in message|stringformat:"s" %}
 <div class="alert alert-danger">
     <a class="close" href="#" data-dismiss="alert">×</a>
 
     {{ message }}
+</div>
+{% else %}
+<div>
 </div>
 {% endif %}
 {% endfor %}
