@@ -57,8 +57,8 @@ $(function() {
      $("#submit-update-bug").on('click', function(event) {
         var idInput = $('input[name="formId"]').val().trim();
         var summaryInput = $('input[name="formSummary"]').val().trim();
-        var stepsInput = $('input[name="formSteps"]').val().trim();
-        var resultInput = $('input[name="formResult"]').val().trim();
+        var stepsInput = $('textarea[name="formSteps"]').val().trim();
+        var resultInput = $('textarea[name="formResult"]').val().trim();
         console.log(summaryInput)
         console.log(stepsInput)
         console.log(resultInput)
