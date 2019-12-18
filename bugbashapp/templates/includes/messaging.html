@@ -5,7 +5,8 @@
 
     {{ message }}
 </div>
-
+{% elif message or message is False %}
+<div></div>
 {% else %}
 <div class="alert alert-danger">
     <a class="close" href="#" data-dismiss="alert">×</a>

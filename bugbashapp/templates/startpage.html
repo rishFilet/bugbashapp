@@ -9,19 +9,34 @@
     <div class="col-lg-8 col-md-10 col-sm-12">
         <div class="card">
             <div class="card-body">
-                <h2>Begin your bug bashing session!</h2>
+                <h2>Begin your bug bashing session!</h2></br>
                 <p style="font-size:20px;">HOW IT WORKS:</p>
-                <p style="font-size:20px;">1. Select the device that you are using for the session</p>
-                <p style="font-size:20px;">2. Select the feature that you will be primarily testing (during the session,
-                    you can edit this, if you find a bug in another area of the app)</p>
-                <p style="font-size:20px;">3. Once you are ready, hit 'Start Bashing' button and a timer for 20 minutes
-                    will start the session</p>
-                <p style="font-size:20px;">4. In 20 minutes, log as many bugs as you can find in the app. Once the timer
-                    is up, you can no longer submit any more bugs for this bug bash session</p>
-                <p style="font-size:20px;">5. QA will verify the bugs reported and update the leaderboard. Check the
-                    leaderboard at anytime after the bug bash week to determine your rank</p>
-                <p style="font-size:20px;">Prizes will be awarded for top 3 and a trophy for the first place</p>
-                <p style="font-size:20px;">Thank you for bashing and improving the Ecobee Mobile App</p>
+                <ol>
+                    <li>Select the device that you are using for the session</li>
+                    <li>Select the feature that you will be primarily testing (during the
+                        session,
+                        you can edit this, if you find a bug in another area of the app)
+                    </li>
+                    <li>Once you are ready, hit 'Start Bashing' button and a timer for 20
+                        minutes
+                        will start the session
+                    </li>
+                    <li>In 20 minutes, log as many bugs as you can find in the app. Once the
+                        timer
+                        is up, you can no longer submit any more bugs for this bug bash session
+                    </li>
+                    <li>DO NOT NAVIGATE AWAY AFTER STARTING SESSION!! Your session will be lost
+                    </li>
+                    <li>QA will verify the bugs reported and update the leaderboard. Check
+                        the
+                        leaderboard at anytime after the bug bash week to determine your rank
+                    </li>
+                </ol>
+                </br>
+                <h3>Prizes will be awarded for top 3 and a trophy for the first place</h3></br>
+                <h3>Thank you for bashing and improving the Ecobee Mobile App</h3></br>
+                {% for message in messages %}
+                {% if "Enable" in message|stringformat:"s" %}
                 <form class="reg-login-form" method="post" novalidate>
                     {% csrf_token %}
                     {% include 'includes/form.html' %}
@@ -30,6 +45,10 @@
                         Bashing
                     </button>
                 </form>
+                {% elif "Disable" in message|stringformat:"s" %}
+                <h2>NEXT BUG BASH IN: 5 Days</h2>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

@@ -54,3 +54,11 @@ html, body {
     border-color: #5bbd76;
 }
 
+.card-body li{
+    font-size:16px;
+}
+
+.card-body h3{
+    font-size:18px;
+}
+

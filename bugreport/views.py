@@ -1,16 +1,16 @@
 import json
 
 from django.contrib import messages
-from django.db.utils import IntegrityError
 from django.contrib.auth.decorators import login_required
+from django.db.utils import IntegrityError
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
+
 from bugreport.forms import BugLogForm, BashSessionForm
-from utils import clear_messages as clr
-
-
 # Create your views here.
 from bugreport.models import BugLogStructure
+from utils import clear_messages as clr
+from utils.bug_bash_switch import switch as sw
 
 
 @login_required
@@ -30,12 +30,12 @@ def create_report(request):
     if request.method == 'POST':
         try:
             logged_bug = BugLogStructure(
-                user=request.user,
-                device=request.POST.get('device'),
-                feature=request.POST.get('feature'),
-                summary=request.POST.get('summary'),
-                steps=request.POST.get('steps'),
-                result=request.POST.get('result'))
+                user = request.user,
+                device = request.POST.get('device'),
+                feature = request.POST.get('feature'),
+                summary = request.POST.get('summary'),
+                steps = request.POST.get('steps'),
+                result = request.POST.get('result'))
             logged_bug.save()
             response_data = {
                 'summary': request.POST.get('summary')
@@ -46,13 +46,13 @@ def create_report(request):
     else:
         return HttpResponse(
             json.dumps({"nothing to see": "this isn't happening"}),
-            content_type="application/json"
+            content_type = "application/json"
         )
-
 
 
 @login_required
 def create_bashing_session(request):
+    clr.clear_msgs(request)
     submitted = False
     if request.method == "POST":
         form = BashSessionForm(request.POST)
@@ -72,5 +72,5 @@ def create_bashing_session(request):
                 return redirect('/home', messages.error(request, message))
     else:
         form = BashSessionForm()
-
+    messages.info(request, sw().status())
     return render(request, 'startpage.html', {'form': form, 'submitted': submitted})

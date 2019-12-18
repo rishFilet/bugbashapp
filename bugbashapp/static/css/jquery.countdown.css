@@ -18,8 +18,15 @@
 .countdown-show1 .countdown-section {
 	width: 98%;
 }
+
+.countdown-show2 {
+    display: flex;
+    align-items: flex-start;
+}
+
 .countdown-show2 .countdown-section {
-	width: 48%;
+	width: 4rem;
+	color: red;
 }
 .countdown-show3 .countdown-section {
 	width: 32.5%;

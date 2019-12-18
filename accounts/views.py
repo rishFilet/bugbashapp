@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, logout, login as auth_login
 from django.shortcuts import render, HttpResponseRedirect, redirect
 
 from utils import clear_messages as clr
+from utils.bug_bash_switch import switch as sw
 from .forms import UserLogin, RegisterForm
 from .models import CustomUser
 
@@ -10,6 +11,7 @@ from .models import CustomUser
 def login_view(request):
     clr.clear_msgs(request)
     if request.user.is_authenticated:
+        # msgs.info(request, sw().status())
         return redirect('/home/')
     else:
         user_login = UserLogin(data = request.POST)
@@ -20,6 +22,7 @@ def login_view(request):
             if user is not None:
                 auth_login(request, user)
                 msgs.success(request, 'Welcome to the Bug bash {}'.format(user.first_name))
+                msgs.info(request, sw().status())
                 return HttpResponseRedirect('/home/')
 
             elif CustomUser.objects.filter(email = email).exists():
