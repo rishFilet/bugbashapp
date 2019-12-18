@@ -62,3 +62,8 @@ html, body {
     font-size:18px;
 }
 
+.btn-primary{
+    background-color: #5bbd76;
+    border-color: #5bbd76;
+}
+
